@@ -1,0 +1,24 @@
+<nav class="navbar navbar-light bg-dark mb-4">
+    <div class="ps-4 pe-4">
+    <a class="navbar-brand m-0" href="/">
+      <img class="brand-icon" src="/images/icon.svg" alt="" width="35" height="35">
+    </a>
+    <span class="brand">Clubhouse</span>
+    </div>
+    <div class="me-4">
+    <% if(user) { %>
+        <% if(!user.mem_status) { %>
+            <a class="btn btn-sm btn-outline-info me-2" href="/user/secret">
+                Become a Member
+            </a>
+        <% } %>
+        <a class="btn btn-sm btn-outline-primary me-2" href="/posts/new">Create Post</a>
+        <a class="btn btn-sm btn-outline-warning" href="/user/logout">Logout</a>
+    <% } else { %>
+        <% if(route !== 'signup') { %>
+            <a class="btn btn-sm btn-outline-info me-2" href="/signup">Sign Up!</a>
+        <% } %>
+            <a class="btn btn-sm btn-outline-light" href="/user/login">Log In!</a>
+    <% } %>
+    </div>
+</nav>

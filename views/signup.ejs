@@ -1,0 +1,25 @@
+<%- include('header'); -%>
+    <div class="container d-flex justify-content-center">
+    <form class="custom-form d-flex flex-column align-items-center"  action="/signup" method="POST">
+    <h4 class="brand" style="color:black">Clubhouse Signup</h4>
+    <p class="text-muted mb-0">Create an account and become a Clubhouse member today!</p>
+    <hr style="width:100%"/>
+            <div class="w-100 me-0 ms-0 mb-3 row">
+                <input id="fname" name="f_name" class="col form-control me-2" placeholder="First Name"/>
+                <input id="lname" name="l_name" class="col form-control" placeholder="Surname Name"/>
+            </div>
+            <div class="row mb-3 w-100">
+                <input id="username" name="username" class="col form-control" placeholder="Username"/>
+            </div>
+            <div class="row mb-3 w-100">
+            <input id="password" name="password" class="col form-control" placeholder="Password" type="password"/>
+            </div>
+            <div class="row mb-3 w-100">
+            <input id="confirm" name="confirm_password" class="col form-control" placeholder="Confirm Password"/type="password">
+            </div>
+            <input id="submit" class="btn btn-info" type="submit" value="Signup Now!"/>
+        </div>
+    </form>
+    </div>
+    <script type="text/javascript" src="javascript/validate_form.js"></script>
+<%- include('footer'); -%>

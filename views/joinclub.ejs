@@ -1,0 +1,13 @@
+<%- include('header') -%>
+<div class="container d-flex justify-content-center">
+    <form class="custom-form" action="/user/secret" method="POST">
+        <div class="d-flex justify-content-center mb-4">
+            <img height="100h" width="100w" src="/images/restricted.png"/>
+        </div>
+        <h5 class="text-muted text-center">Enter the secret password to get EXCLUSIVE access!</h5>
+        <hr class="w-100"/>
+        <input name="password" id="secret_password" class="form-control mb-4" type="password"/>
+        <div class="d-flex justify-content-center">
+            <input class="btn btn-sm btn-info" type="submit" value="Submit Password" />
+        </div>
+</div>

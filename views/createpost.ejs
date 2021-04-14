@@ -1,0 +1,11 @@
+<%- include('header'); -%>
+<div class="container d-flex justify-content-center align-items-center">
+    <form class="custom-form" action="/posts/new" method="POST">
+        <h4>Create New Post</h4>
+        <small class="text-muted">Please respect our community guidelienes at all times. Offences may result in membership revocation and posts removal.</small>
+        <hr class="w-100"/>
+        <input class="form-control mb-4" name="title" placeholder="Title"/>
+        <textarea class="form-control w-100 mb-4" id="text" name="text" rows="4" placeholder="Enter your post details here..." ></textarea>
+        <input class="btn btn-sm btn-warning" type="submit" value="Post"/>
+    </form>
+</div>

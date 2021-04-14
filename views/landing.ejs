@@ -1,0 +1,40 @@
+<%- include('header'); -%>
+<% if(posts.length) { %>
+    <div class="container">
+        <% if(user) { %>
+        <h5 class="text-muted mb-4">
+            <%= `Welcome to The Clubhouse, ${user.f_name}` %>
+        </h5>
+        <% } %>
+    <% for(post of posts) { %>
+        <div class="card mb-4">
+            <div class="card-header"><%= post.title %></div>
+            <div class="card-body">
+                <p style="white-space:pre-wrap"><%= post.text %></p>
+            </div>
+            <div class="card-footer">
+                <%if(user && user.mem_status) { %>
+                <div class="d-flex justify-content-between align-items-center" >
+                    <small class="text-muted">
+                        <%= `Posted by ${post.author.f_name} ${post.author.l_name} on ${post.date.toUTCString()}`%>
+                    </small>
+                    <% if(user.admin) { %>
+                    <form method="POST" action="/posts/remove/">
+                        <input name="post_id" value=<%= post._id %> type="hidden"/>
+                        <input type="submit" class="btn btn-sm btn-outline-danger" value="Delete"/>
+                    </form>
+                    <% } %>
+                </div>
+                <% } else { %>
+                <small class="text-muted"><%= post.date.toUTCString() %></small>
+                <% } %>
+            </div>
+        </div>
+    <% } %>
+    <% } else { %>
+    <div class="container d-flex justify-content-center">
+        <small class="text-muted">There are no posts to display.</small>
+    </div>
+    </div>
+<% } %>
+<%- include('footer'); -%>

@@ -1,0 +1,15 @@
+<%- include('header'); -%>
+<div class="container d-flex justify-content-center">
+    <form class="custom-form" action="/user/login" method="POST">
+        <div class="w-100 d-flex justify-content-center">
+            <h4 class="brand" style="color:black">Clubhouse </h4>
+        </div>
+        <p class="text-secondary text-center">Login to your account to view posts</p>
+        <hr class="w-100"/>
+        <input class="form-control mb-4" name="username" placeholder="Enter Username" />
+        <input class="form-control mb-3" name="password" type="password" placeholder="Enter Password" />
+        <div class="w-100 d-flex justify-content-center">
+            <input class="btn btn-block btn-info" id="submit" type="submit" value="Login to Clubhouse" />
+        </div>
+    </form>
+</div>

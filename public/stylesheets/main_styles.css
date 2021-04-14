@@ -1,0 +1,26 @@
+.brand {
+    font-family: 'New Tegomin', serif;
+    color: snow;
+}
+
+.brand-icon {
+    border-radius: 50px;
+}
+
+.custom-form {
+    border: 1px solid lightgrey !important;
+    border-radius: 5px !important;
+    padding: 4rem;
+    width: 700px;
+    min-width: 400px;
+}
+
+.icon {
+    color: snow;
+    height: 20px;
+    width: 20px;
+}
+
+.icon:hover {
+    color: '#FFD700' !important;
+}
